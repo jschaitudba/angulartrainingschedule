@@ -1,0 +1,21 @@
+<form #form="ngForm" (submit)="onSubmit(form)">
+  <div class="form-groupp">
+      <label>Training Schedule Name</label>
+      <input name="TraiingScheduleName" #TraiingScheduleName="ngModel" [(ngModel)]="service.formData.TRAINING_NAME" class="form-control" required>
+      <div class="validation-error" *ngIf="TraiingScheduleName.invalid && TraiingScheduleName.touched">Required</div>
+  </div>
+  <div class="form-groupp">
+      <label>Start Date</label>
+      <input name="StartDate" #StartDate="ngModel" [(ngModel)]="service.formData.START_DATE" class="form-control" required>
+      <div class="validation-error" *ngIf="StartDate.invalid && StartDate.touched">Required</div>
+  </div>
+  <div class="form-groupp">
+      <label>EndDate</label>
+      <input name="EndDate" #EndDate="ngModel" [(ngModel)]="service.formData.END_DATE" class="form-control" required>
+      <div class="validation-error" *ngIf="EndDate.invalid && EndDate.touched">Required</div>
+  </div>
+  <br>
+  <div class="form-group">
+      <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">Submit</button>
+  </div>
+</form>

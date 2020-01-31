@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TRAININGSCHEDULEModelStoreContainer" CdmEntityContainer="DBModel">
+    <EntitySetMapping Name="TRAINING_SCHEDULES">
+      <EntityTypeMapping TypeName="TRAININGSCHEDULEModel.TRAINING_SCHEDULES">
+        <MappingFragment StoreEntitySet="TRAINING_SCHEDULES">
+          <ScalarProperty Name="TRAINING_ID" ColumnName="TRAINING_ID" />
+          <ScalarProperty Name="TRAINING_NAME" ColumnName="TRAINING_NAME" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spInsertTRAINING_SCHEDULES" FunctionName="TRAININGSCHEDULEModel.Store.spInsertTRAINING_SCHEDULES" />
+  </EntityContainerMapping>
+</Mapping>
